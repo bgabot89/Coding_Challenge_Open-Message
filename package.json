@@ -22,11 +22,16 @@
     "babel-preset-react": "^6.1.18",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
+    "node-sass": "^4.5.2",
     "react-addons-test-utils": "^0.14.7",
-    "webpack": "^1.12.9",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.17.0",
+    "webpack": "^1.15.0",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
@@ -37,5 +42,15 @@
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "redux": "^3.0.4"
-  }
+  },
+  "keywords": [
+   "react",
+   "babel",
+   "es2015",
+   "webpack",
+   "sass",
+   "es6",
+   "hello world kit",
+   "kit"
+ ]
 }
