@@ -3,8 +3,15 @@ import ReactDOM from 'react-dom';
 import style from '../styles/index.scss';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import ReduxPromise from 'redux-promise';
 
-import reducers from './reducers';
 import App from './components/app';
+import reducers from './reducers';
 
-ReactDOM.render(<App />, document.querySelector('.selector'));
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>
+, document.querySelector('.selector'));
