@@ -1,10 +1,13 @@
 # Coding Challenge for Open Message
-Coding Challenge Repo for Open Message. Will use an Anime API of some sort.
+Coding Challenge Repo for Open Message. Uses the Food2Fork API
 
 # Stack
 React-Redux
 SASS
 
 # Instructions
-## npm install
-## npm start
+
+1. npm install
+2. npm start
+
+then visit http://localhost:8080
