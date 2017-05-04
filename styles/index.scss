@@ -1,6 +1,10 @@
+//creating sass variables
+$primary-color: pink;
+$font-stack: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
 #body {
   height: 100%;
-  background-color: pink;
+  background-color: $primary-color;
 }
 
 .selector {
@@ -11,10 +15,11 @@
 
 #title {
   position: absolute;
-  top: 130px;
-  left: 30%;
-  font-size: 50px;
+  top: 120px;
+  left: 27%;
+  font-size: 60px;
   color: white;
+  font-family: $font-stack;
 }
 
 #input-section {
@@ -27,6 +32,11 @@
   text-align: center;
   width: 600px;
   height: 50px;
+}
+
+input[type="text"]
+{
+  font-size: 30px;
 }
 
 #submit-button {
