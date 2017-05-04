@@ -11,6 +11,9 @@ export function fetchFood(food) {
   const url = `${ROOT_URL}&q=${food}`;
   const request = axios.get(url);
 
+  console.log('Request', request);
+
+  //returns a promise and sends it as a payload
   return  {
     type: FETCH_FOOD,
     payload: request //optional property that stores data for this type of action

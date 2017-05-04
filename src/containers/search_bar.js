@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 import { fetchFood } from '../actions/index';
 
 class SearchBar extends Component {
+
+  //pass in the properties into the constructor
   constructor(props) {
     super(props);
 
@@ -22,7 +24,7 @@ class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
 
-    //fetching data from API, call data, search and then set term back to empty term
+    //fetching data from API, call data, search and then set term back to empty term once event is handled
     this.props.fetchFood(this.state.term);
     this.setState({ term: '' });
   }
@@ -43,10 +45,10 @@ class SearchBar extends Component {
   }
 }
 
-
-//function that will add films data to the searchbar container
+//function that will add food data to the searchbar container
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchFood }, dispatch); //action will flow into the reducer of this application
+  return bindActionCreators({ fetchFood }, dispatch); //action will flow into the middleware and then the reducer of this application
 }
 
+//connecting the SearchBar property to Redux
 export default connect(null, mapDispatchToProps)(SearchBar);
