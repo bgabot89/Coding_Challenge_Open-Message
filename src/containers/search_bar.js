@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchFood } from '../actions/index';
+import { fetchFood } from '../actions/food_action';
 
 class SearchBar extends Component {
 
@@ -21,6 +21,7 @@ class SearchBar extends Component {
     this.setState({ term: event.target.value });
   }
 
+  //when submitting a form, grab the promised data from fetchFood and then render from the render() function
   onFormSubmit(event) {
     event.preventDefault();
 
@@ -31,14 +32,15 @@ class SearchBar extends Component {
 
   render () {
     return (
-      <form onSubmit={this.onFormSubmit} className="input-group">
+      <form onSubmit={this.onFormSubmit} id="input-section" className="input-group">
         <input
+          id="input-field"
           placeholder="Search for a recipe"
           className="form-control"
           value={this.state.term}
           onChange={this.onInputChange} />
         <span className="input-group-btn">
-          <button type="submit" className="btn btn-secondary">Submit</button>
+          <button type="submit" id="submit-button" className="btn btn-secondary">Submit</button>
         </span>
       </form>
     );

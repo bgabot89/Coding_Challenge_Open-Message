@@ -1,4 +1,4 @@
-import { FETCH_FOOD }  from '../actions/index';
+import { FETCH_FOOD }  from '../actions/food_action';
 //reducer function that will get an action and console log the action
 //makes initial state of empty array
 export default function (state = [], action) {
