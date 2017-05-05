@@ -13,7 +13,7 @@ Application allows user to input a food that they want to cook with. Food2Fork A
 1. npm install
 2. npm start
 
+then visit http://localhost:8080
+
 # Bugs
 CORS error when receiving data from API. Workaround: Install a plugin from chrome allowing CORS for your browser.
-
-then visit http://localhost:8080
