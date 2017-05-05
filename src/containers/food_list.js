@@ -7,7 +7,7 @@ function getRandomFood(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-//create a variable that randomizes a number from 0 to 30, and grabs taht specific food from an array
+//create a variable that randomizes a number from 0 to 30, and grabs a specific food from an array
 var randomNum = getRandomFood(0,30);
 
 class FoodList extends Component {
@@ -18,6 +18,7 @@ class FoodList extends Component {
         <img className ="food-image" src={`${foodData.recipes[randomNum].image_url}`}/>
           <div className="card-block">
             <p class="card-text">You should cook: <b>{foodData.recipes[randomNum].title}</b></p>
+            <p class="card-text"><b><a href={`${foodData.recipes[randomNum].source_url}`}>Link to Recipe</a></b></p>
           </div>
       </div>
     );
