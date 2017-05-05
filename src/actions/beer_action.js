@@ -15,5 +15,5 @@ export function fetchBeer(beer) {
   return {
     type: FETCH_BEER,
     payload: request
-  }
-};
+  };
+}

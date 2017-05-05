@@ -2,10 +2,12 @@ import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux';
 
+//randomizes a number
 function getRandomFood(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+//create a variable that randomizes a number from 0 to 30, and grabs taht specific food from an array
 var randomNum = getRandomFood(0,30);
 
 class FoodList extends Component {
@@ -21,18 +23,13 @@ class FoodList extends Component {
         <a href={`${foodData.recipes[randomNum].source_url}`}>Link to Recipe</a>
         </td>
       </tr>
-    )
+    );
   }
 
 //append all data here
   render () {
     return (
       <table className="table table-hover">
-        <thead>
-          <tr>
-            <th>You are going to Cook:</th>
-          </tr>
-        </thead>
         <tbody>
           {this.props.food.map(this.renderFood)}
         </tbody>

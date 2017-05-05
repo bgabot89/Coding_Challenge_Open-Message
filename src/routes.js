@@ -1,8 +1,12 @@
 import React from 'react';
 import { Route, IndexRoute, Router} from 'react-router';
-import { Component } from 'react';
-import Home from './components/home';
+
+import App from './components/app';
+import RecipeRender from './components/recipe_render';
 
 export default (
-  <IndexRoute component={Home}/>
+  <Router>
+      <Route path="/" component={App}/>
+      <Route path="/recipe" component={RecipeRender}/>
+  </Router>
 );

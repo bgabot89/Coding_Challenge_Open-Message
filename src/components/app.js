@@ -8,7 +8,9 @@ export default class App extends Component {
   render () {
     return (
       <div>
-        <h1 id="title"> Search for a Recipe! </h1>
+        <header>
+        </header>
+        <h1 id="title"> Search for Random Recipe </h1>
         <SearchBar />
         <FoodList />
       </div>
