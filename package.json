@@ -2,6 +2,9 @@
   "name": "coding-challenge-open-message",
   "version": "1.0.0",
   "description": "Coding Challenge Repo for Open Message. Will use an Anime API of some sort.",
+  "engines": {
+    "node": "6.2.0"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
