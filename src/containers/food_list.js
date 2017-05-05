@@ -14,26 +14,21 @@ class FoodList extends Component {
 
   renderFood(foodData) {
     return (
-      <tr>
-        <td> <h1>Cook Some: {foodData.recipes[randomNum].title}</h1></td>
-        <td>
+      <div className="card text-center">
         <img className ="food-image" src={`${foodData.recipes[randomNum].image_url}`}/>
-        </td>
-        <td>
-        <a href={`${foodData.recipes[randomNum].source_url}`}>Link to Recipe</a>
-        </td>
-      </tr>
+          <div className="card-block">
+            <p class="card-text">You should cook: <b>{foodData.recipes[randomNum].title}</b></p>
+          </div>
+      </div>
     );
   }
 
 //append all data here
   render () {
     return (
-      <table className="table table-hover">
-        <tbody>
+      <div>
           {this.props.food.map(this.renderFood)}
-        </tbody>
-      </table>
+      </div>
     );
   }
 }

@@ -7,10 +7,10 @@ import FoodList from '../containers/food_list';
 export default class App extends Component {
   render () {
     return (
-      <div>
+      <div className="Recipe-section">
         <header>
         </header>
-        <h1 id="title"> Search for Random Recipe </h1>
+          <h1 className="recipe-name"> Search for a Random Recipe </h1>
         <SearchBar />
         <FoodList />
       </div>

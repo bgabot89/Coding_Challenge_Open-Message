@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchFood } from '../actions/food_action';
+import { Link } from 'react-router';
 
 class SearchBar extends Component {
 
@@ -32,7 +33,7 @@ class SearchBar extends Component {
 
   render () {
     return (
-      <form onSubmit={this.onFormSubmit} id="input-section" className="input-group">
+      <form onSubmit={this.onFormSubmit} className="input-group">
         <input
           type="text"
           id="input-field"
